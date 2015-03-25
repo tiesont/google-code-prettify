@@ -1,19 +1,17 @@
+# Javascript code prettifier
 
-    <small style="float: right">Languages : <a href="README-zh-Hans.html">CH</a></small>
-    <h1>Javascript code prettifier</h1>
+## Setup
 
-    <h2>Setup</h2>
-    <ol>
-      <li><a href="http://code.google.com/p/google-code-prettify/downloads/list">Download</a> a distribution
-      <li>Include the script tag below in your document
+1.  [Download](http://code.google.com/p/google-code-prettify/downloads/list) a distribution
+2.  Include the script tag below in your document
         <pre class="prettyprint">
 &lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"&gt;&lt;/script&gt;</pre>
-      <li>See <a href="http://code.google.com/p/google-code-prettify/wiki/GettingStarted">Getting Started</a> to configure that URL with options you need.</a>
-      <li>Look at the <a href="http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html">skin gallery</a> and pick styles that suit you.</li>
-    </ol>
+3.  See [Getting Started](http://code.google.com/p/google-code-prettify/wiki/GettingStarted) to configure that URL with options you need.</a>
+4.  Look at the [skin gallery](http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html) and pick styles that suit you.
 
-    <h2>Usage</h2>
-    <p>Put code snippets in
+## Usage
+
+Put code snippets in
     <tt>&lt;pre class="prettyprint"&gt;...&lt;/pre&gt;</tt>
     or <tt>&lt;code class="prettyprint"&gt;...&lt;/code&gt;</tt>
     and it will automatically be pretty printed.
@@ -29,7 +27,7 @@ public:
   // Voila
   static const string VOILA = "Voila";
 
-  // will not interfere with embedded <a href="#voila1">tags</a>.
+  // will not interfere with embedded [tags](#voila1).
 }</pre>
 
         <td><pre class="prettyprint"><a name="voila2"></a>class Voila {
@@ -37,63 +35,66 @@ public:
   // Voila
   static const string VOILA = "Voila";
 
-  // will not interfere with embedded <a href="#voila2">tags</a>.
+  // will not interfere with embedded [tags](#voila2).
 }</pre>
     </table>
 
-    <h2>FAQ</h2>
-    <h3 id="langs">For which languages does it work?</h3>
-    <p>The comments in <tt>prettify.js</tt> are authoritative but the lexer
+## FAQ
+
+### For which languages does it work?
+
+The comments in <tt>prettify.js</tt> are authoritative but the lexer
     should work on a number of languages including C and friends,
     Java, Python, Bash, SQL, HTML, XML, CSS, Javascript, Makefiles,
     and Rust.
     It works passably on Ruby, PHP, VB, and Awk and a decent subset of Perl
     and Ruby, but, because of commenting conventions, but doesn't work on
-    Smalltalk.</p>
+    Smalltalk.
 
-    <p>Other languages are supported via extensions:
+Other languages are supported via extensions:
     <div>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-apollo.js">Apollo</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-basic.js">Basic</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-clj.js">Clojure</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-css.js">CSS</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-dart.js">Dart</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-erlang.js">Erlang</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-go.js">Go</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-hs.js">Haskell</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-lisp.js">Lisp, Scheme</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-llvm.js">Llvm</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-lua.js">Lua</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-matlab.js">Matlab</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-ml.js">MLs:F#, Ocaml,SML</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-mumps.js">Mumps</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-n.js">Nemerle</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-pascal.js">Pascal</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-proto.js">Protocol buffers</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-r.js">R, S</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-rd.js">RD</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-scala.js">Scala</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-sql.js">SQL</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-tcl.js">TCL</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-tex.js">Latek</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-vb.js">Visual Basic</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-vhdl.js">CHDL</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-wiki.js">Wiki</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-xq.js">XQ</a>
-      <a class="Extension" href="http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-yaml.js">YAML</a>
+      [Apollo](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-apollo.js)
+      [Basic](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-basic.js)
+      [Clojure](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-clj.js)
+      [CSS](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-css.js)
+      [Dart](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-dart.js)
+      [Erlang](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-erlang.js)
+      [Go](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-go.js)
+      [Haskell](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-hs.js)
+      [Lisp, Scheme](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-lisp.js)
+      [Llvm](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-llvm.js)
+      [Lua](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-lua.js)
+      [Matlab](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-matlab.js)
+      [MLs:F#, Ocaml,SML](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-ml.js)
+      [Mumps](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-mumps.js)
+      [Nemerle](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-n.js)
+      [Pascal](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-pascal.js)
+      [Protocol buffers](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-proto.js)
+      [R, S](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-r.js)
+      [RD](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-rd.js)
+      [Scala](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-scala.js)
+      [SQL](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-sql.js)
+      [TCL](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-tcl.js)
+      [Latek](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-tex.js)
+      [Visual Basic](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-vb.js)
+      [CHDL](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-vhdl.js)
+      [Wiki](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-wiki.js)
+      [XQ](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-xq.js)
+      [YAML](http://code.google.com/p/google-code-prettify/source/browse/trunk/src/lang-yaml.js)
     </div>
 
     <p>If you'd like to add an extension for your favorite language, please
     look at <tt>src/lang-lisp.js</tt> and file an
-    <a href="http://code.google.com/p/google-code-prettify/issues/list"
-     >issue</a> including your language extension, and a testcase.</p>
+    [issue](http://code.google.com/p/google-code-prettify/issues/list) including your language extension, and a testcase.
 
-    <h3>How do I specify the language of my code?</h3>
-    <p>You don't need to specify the language since <code>prettyprint()</code>
+### How do I specify the language of my code?
+
+You don't need to specify the language since `prettyprint()`
     will guess.  You can specify a language by specifying the language extension
-    along with the <code>prettyprint</code> class like so:</p>
+    along with the `prettyprint` class like so:
+
     <pre class="prettyprint lang-html"
->&lt;pre class=&quot;prettyprint <b>lang-html</b>&quot;&gt;
+>&lt;pre class=&quot;prettyprint **lang-html**&quot;&gt;
   The lang-* class specifies the language file extensions.
   File extensions supported by default include
     "bsh", "c", "cc", "cpp", "cs", "csh", "cyc", "cv", "htm", "html",
@@ -101,41 +102,47 @@ public:
     "xhtml", "xml", "xsl".
 &lt;/pre&gt;</pre>
 
-    <p>You may also use the
-    <a href="http://dev.w3.org/html5/spec-author-view/the-code-element.html#the-code-element"
-     >HTML 5</a> convention of embedding a <tt>code</tt> element inside the
-    <code>PRE</code> and using <code>language-java</code> style classes.
-    E.g. <xmp class="prettyprint"><pre class="prettyprint"><code class="language-java">...</code></pre></xmp>
+You may also use the
+    [HTML 5](http://dev.w3.org/html5/spec-author-view/the-code-element.html#the-code-element) convention of embedding a <tt>code</tt> element inside the
+    `PRE` and using `language-java` style classes.
+    E.g. <xmp class="prettyprint">
 
-    <h3>It doesn't work on <tt>&lt;obfuscated code sample&gt;</tt>?</h3>
+    ...
+</xmp>
+
+### It doesn't work on <tt>&lt;obfuscated code sample&gt;</tt>?
+
     <p>Yes.  Prettifying obfuscated code is like putting lipstick on a pig
-    &mdash; i.e. outside the scope of this tool.</p>
+    &mdash; i.e. outside the scope of this tool.
 
-    <h3>Which browsers does it work with?</h3>
-    <p>It's been tested with IE 6, Firefox 1.5 &amp; 2, and Safari 2.0.4.
-    Look at <a href="tests/prettify_test.html">the test page</a> to see if it
-    works in your browser.</p>
+### Which browsers does it work with?
 
-    <h3>What's changed?</h3>
-    <p>See the <a href="CHANGES.html">change log</a></p>
+It's been tested with IE 6, Firefox 1.5 &amp; 2, and Safari 2.0.4.
+    Look at [the test page](tests/prettify_test.html) to see if it
+    works in your browser.
 
-    <h3>Why doesn't Prettyprinting of strings work on WordPress?</h3>
-    <p>Apparently wordpress does "smart quoting" which changes close quotes.
+### What's changed?
+
+See the [change log](CHANGES.html)
+
+### Why doesn't Prettyprinting of strings work on WordPress?
+
+Apparently wordpress does "smart quoting" which changes close quotes.
     This causes end quotes to not match up with open quotes.
     <p>This breaks prettifying as well as copying and pasting of code samples.
     See
-    <a href="http://wordpress.org/support/topic/125038"
-    >WordPress's help center</a> for info on how to stop smart quoting of code
-    snippets.</p>
+    [WordPress's help center](http://wordpress.org/support/topic/125038) for info on how to stop smart quoting of code
+    snippets.
 
-    <h3 id="linenums">How do I put line numbers in my code?</h3>
-    <p>You can use the <code>linenums</code> class to turn on line
+### How do I put line numbers in my code?
+
+You can use the `linenums` class to turn on line
     numbering.  If your code doesn't start at line number 1, you can
     add a colon and a line number to the end of that class as in
-    <code>linenums:52</code>.
+    `linenums:52`.
 
-    <p>For example
-<pre class="prettyprint">&lt;pre class="prettyprint linenums:<b>4</b>"
+For example
+<pre class="prettyprint">&lt;pre class="prettyprint linenums:**4**"
 &gt;// This is line 4.
 foo();
 bar();
@@ -155,62 +162,61 @@ far();
 faz();
 </pre>
 
-    <h3>How do I prevent a portion of markup from being marked as code?</h3>
-    <p>You can use the <code>nocode</code> class to identify a span of markup
+### How do I prevent a portion of markup from being marked as code?
+
+    <p>You can use the `nocode` class to identify a span of markup
     that is not code.
+
 <pre class="prettyprint">&lt;pre class=prettyprint&gt;
 int x = foo();  /* This is a comment  &lt;span class="nocode"&gt;This is not code&lt;/span&gt;
   Continuation of comment */
 int y = bar();
 &lt;/pre&gt;</pre>
+
 produces
+
 <pre class="prettyprint">
 int x = foo();  /* This is a comment  <span class="nocode">This is not code</span>
   Continuation of comment */
 int y = bar();
 </pre>
 
-    <p>For a more complete example see the issue22
-    <a href="tests/prettify_test.html#issue22">testcase</a>.</p>
+For a more complete example see the issue22
+    [testcase](tests/prettify_test.html#issue22).
 
-    <h3>I get an error message "a is not a function" or "opt_whenDone is not a function"</h3>
-    <p>If you are calling <code>prettyPrint</code> via an event handler, wrap it in a function.
+### I get an error message "a is not a function" or "opt_whenDone is not a function"
+
+If you are calling `prettyPrint` via an event handler, wrap it in a function.
     Instead of doing
-    <blockquote>
-      <code class="prettyprint lang-js"
-       >addEventListener('load', prettyPrint, false);</code>
-    </blockquote>
+    > `addEventListener('load', prettyPrint, false);`
     wrap it in a closure like
-    <blockquote>
-      <code class="prettyprint lang-js"
-       >addEventListener('load', function (event) { prettyPrint() }, false);</code>
-    </blockquote>
-    so that the browser does not pass an event object to <code>prettyPrint</code> which
+    > `addEventListener('load', function (event) { prettyPrint() }, false);`
+    so that the browser does not pass an event object to `prettyPrint` which
     will confuse it.
 
-    <h3>How can I customize the colors and styles of my code?</h3>
+### How can I customize the colors and styles of my code?
+
     <p>
-    Prettify adds <code>&lt;span&gt;</code> with <code>class</code>es describing
+    Prettify adds `<span>` with `class`es describing
     the kind of code.  You can create CSS styles to matches these
     classes.
     See the
-    <a href="http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html">
-    theme gallery</a> for examples.
-    </p>
+    [
+    theme gallery](http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html) for examples.
 
-    <h3>I can't add classes to my code (because it comes from Markdown, etc.)</h3>
-    <p>
-    Instead of <code class="prettyprint">&lt;pre class="prettyprint ..."&gt;</code> you can use a
+### I can't add classes to my code (because it comes from Markdown, etc.)
+
+    Instead of `<pre class="prettyprint ...">` you can use a
     comment or processing instructions that survives processing instructions :
-    <code>&lt;?prettify ...?&gt;</code> works as explained in 
-    <a href="http://code.google.com/p/google-code-prettify/wiki/GettingStarted">Getting Started</a></p>
+    `<?prettify ...?>` works as explained in 
+    [Getting Started](http://code.google.com/p/google-code-prettify/wiki/GettingStarted)
 
-    <h3>How can I put line numbers on every line instead of just every
-    fifth line?</h3>
+### How can I put line numbers on every line instead of just every
+    fifth line?
 
-    <p>Prettify puts lines into an HTML list element so that line
+Prettify puts lines into an HTML list element so that line
     numbers aren't caught by copy/paste, and the line numbering is
-    controlled by CSS in the default stylesheet, "prettify.css".</p>
+    controlled by CSS in the default stylesheet, "prettify.css".
 
     <pre class="prettyprint">
 &lt;style&gt;
